@@ -1,0 +1,15 @@
+/* this page is linked to base.html.twig*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    background-color: #0c192a;
+}
+.styleLogo{
+    border-radius: 10px;
+    width: 100px;
+}
+

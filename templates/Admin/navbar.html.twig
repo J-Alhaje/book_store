@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="row w-100">
+                <div class="col d-flex justify-content-start align-items-center">
+                    <a href="{{ path("Home") }}">
+                        <img class="styleLogo m-4" src="{{ asset('/imgs/LogoExample.jpg') }}" alt="logo">
+                    </a>
+                </div>
+                <div class="col d-flex justify-content-end align-items-center">
+                    <a class="text-decoration-none text-warning ml-4 ms-4" target="_blank"
+                       href="https://www.linkedin.com/in/jamil-alhaje-92674924a/">
+                        <i class="bi bi-linkedin fs-3 me-2"></i>LinkedIn
+                    </a>
+                    <a class="text-decoration-none text-warning ms-4" target="_blank"
+                       href="https://github.com/J-Alhaje">
+                        <i class="bi bi-github fs-3 me-2"></i>Github
+                    </a>
+                    <a class="text-decoration-none text-warning ms-4" target="_blank"
+                       href="https://stackoverflow.com/users/25211361/j-alhaje">
+                        <i class="bi bi-stack-overflow fs-3 me-2"></i>Stackoverflow
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-dark navbar w-100 d-flex flex-column justify-content-center align-items-center py-3">
+        {% if app.user.email %}
+            <h3 class="text-white mb-3">Welcome Admin</h3>
+        {% endif %}
+        <div class="d-flex flex-row align-items-start">
+            <a class="btn btn-primary fw-bold mx-2" href="{{ path('Home') }}">Home</a>
+            <a class="btn btn-secondary mx-2" href="{{ path('app_logout') }}">Sign Out</a>
+            <a class="btn btn-warning mx-2" href="{{ path('app_products_index') }}">The products database</a>
+        </div>
+    </div>
+{% endblock %}
